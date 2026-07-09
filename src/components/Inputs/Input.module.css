@@ -1,0 +1,48 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  border-radius: var(--radius-pill);
+  padding: 12px 28px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+  opacity: 0.92;
+}
+
+.primary {
+  background: var(--gradient-brand);
+  color: #ffffff;
+}
+
+.outline {
+  background: transparent;
+  color: var(--color-text);
+  border: 1.5px solid #4d4a7d;
+}
+
+.ghost {
+  background: #ffffff14;
+  color: var(--color-text);
+  border: 1px solid #ffffff1f;
+}
+
+.searchInput {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #0000000d;
+  border: 20px solid #ffffff26;
+  border-radius: var(--radius-pill);
+  padding: 9px 20px;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}

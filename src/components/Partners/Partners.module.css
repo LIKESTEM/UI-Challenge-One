@@ -1,0 +1,23 @@
+.partners {
+  background: linear-gradient(90deg, #2c1058 0%, #330c72 55%, #6a3bff 100%);
+  padding: 22px 24px;
+}
+
+.track {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.brand {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #ffffffe6;
+  white-space: nowrap;
+  opacity: 0.9;
+}

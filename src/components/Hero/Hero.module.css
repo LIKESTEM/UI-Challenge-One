@@ -1,0 +1,193 @@
+.hero {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 56px 24px 80px;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.heading {
+  font-size: clamp(2.2rem, 4.2vw, 3.2rem);
+  color: var(--color-text);
+  max-width: 620px;
+}
+
+.subtext {
+  margin-top: 20px;
+  color: var(--color-text-muted);
+  font-size: 1rem;
+  max-width: 480px;
+  line-height: 1.6;
+}
+
+.ctaRow {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+
+.watchVideo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  border: none;
+  color: var(--color-text);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.videoIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  
+  /* Matches the square-ish rounded edges in the image */
+  /* border-radius: var(--radius-sm);  */
+  
+  /* Uses your existing brand gradients and text colors */
+  /* background: var(--gradient-brand); */
+  color: var(--color-text-icon);
+  
+  /* Gives it that high-tech Web3 ambient glow */
+  /* box-shadow: 0 4px 12px rgba(155, 59, 255, 0.35); */
+}
+
+
+/* Stats */
+.statsWrap {
+  margin-top: 44px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.statsBar {
+  display: flex;
+  background: var(--gradient-brand-soft);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+}
+
+.stat {
+  padding: 14px 28px;
+  border: none;
+}
+
+/* .stat:first-child {
+  background: var(--gradient-brand-soft);
+} */
+
+.stat:last-child {
+  border-right: none;
+}
+
+.statValue {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--color-text);
+}
+
+.statLabel {
+  font-size: 0.8rem;
+  color: var(--color-text-dim);
+  margin-top: 2px;
+}
+
+.activeUsers {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.avatarStack {
+  display: flex;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 3px solid var(--color-bg-mid);
+  margin-left: -12px;
+  object-fit: cover;
+}
+
+.avatar:first-child {
+  margin-left: 0;
+}
+
+/* Bid card */
+.bidCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  aspect-ratio: 4 / 5;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 30px 80px -30px #4824ff66;
+}
+
+.artwork {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.bidInfo {
+  position: relative;
+  z-index: 1;
+  padding: 10px 10px 20px;
+  background: linear-gradient(to top, #412b92d9 0%, #4d2aff99 45%, #4d6bff1a 100%);
+  /* backdrop-filter: blur(6px); */
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.bidRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.bidLabel {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin-bottom: 4px;
+  text-shadow: 0 1px 6px #000000b3;
+}
+
+.bidValue {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.15rem;
+  text-shadow: 0 1px 6px #000000b3;
+}
+
+.bidActions {
+  display: flex;
+  gap: 14px;
+}
+
+.bidActions > * {
+  flex: 1;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+}

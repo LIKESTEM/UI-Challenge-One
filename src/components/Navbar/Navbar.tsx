@@ -6,6 +6,12 @@ const NAV_LINKS = ["Home", "Explore", "Marketplace", "Artists", "News"];
 
 function Navbar() {
   const [active, setActive] = useState("Home");
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const handleLinkClick = (link: string) => {
+    setActive(link);
+    setMenuOpen(false);
+  };
 
   return (
     <header className={styles.navbar}>
@@ -20,7 +26,7 @@ function Navbar() {
               <a
                 href={`#${link.toLowerCase()}`}
                 className={link === active ? styles.activeLink : undefined}
-                onClick={() => setActive(link)}
+                onClick={() => handleLinkClick(link)}
               >
                 {link}
               </a>
@@ -44,6 +50,34 @@ function Navbar() {
         </div>
         <Button variant="primary">Register</Button>
       </div>
+
+      <button
+        type="button"
+        className={`${styles.burger} ${menuOpen ? styles.burgerOpen : ""}`}
+        aria-label={menuOpen ? "Close menu" : "Open menu"}
+        aria-expanded={menuOpen}
+        onClick={() => setMenuOpen((open) => !open)}
+      >
+        <span />
+        <span />
+        <span />
+      </button>
+
+      <nav className={`${styles.mobileNav} ${menuOpen ? styles.mobileNavOpen : ""}`}>
+        <ul>
+          {NAV_LINKS.map((link) => (
+            <li key={link}>
+              <a
+                href={`#${link.toLowerCase()}`}
+                className={link === active ? styles.activeLink : undefined}
+                onClick={() => handleLinkClick(link)}
+              >
+                {link}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
     </header>
   );
 }

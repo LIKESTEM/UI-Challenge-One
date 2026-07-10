@@ -29,12 +29,18 @@
 .featured {
   transform: scale(1.12);
   z-index: 2;
-  box-shadow: 0 30px 60px -20px #6a3bff80;
+  box-shadow: 0 0 60px 0px #6a3bff80;
+  margin: 20px
+}
+
+.likeIcon {
+  color: #4a0d90e2;
 }
 
 .priceTag {
-  background: #ffffffe6;
-  color: #1a1330;
+  background: rgba(255, 255, 255, 0);
+  border: 2px solid #130e5a1a;
+  color: #ffffff;
   font-weight: 700;
   font-size: 0.75rem;
   padding: 5px 12px;
@@ -52,7 +58,7 @@
   align-items: flex-end;
   justify-content: space-between;
   gap: 8px;
-  background: linear-gradient(0deg, #2c1a6bd9 0%, #4d2aff99 55%, #4d6bff1a 100%);
+  background: linear-gradient(125deg, #9429b2d9 0%, #17409ecd 55%, #0e345a1a 100%);
   /* backdrop-filter: blur(6px); */
   -webkit-backdrop-filter: blur(6px);
 }
@@ -83,7 +89,7 @@
   gap: 4px;
   font-size: 0.75rem;
   color: #fff;
-  background: #ffffff26;
+  /* background: #ffffff26; */
   padding: 4px 8px;
   border-radius: var(--radius-pill);
 }

@@ -1,17 +1,32 @@
+import Slider from "../Slider/Slider";
 import styles from "./Partners.module.css";
 
-const PARTNERS = ["PayPal", "coinbase", "BINANCE", "Revolut", "EXODUS", "BITFINEX", "Blockchain"];
+const PARTNERS = [
+  "PayPal",
+  "coinbase",
+  "BINANCE",
+  "Revolut",
+  "EXODUS",
+  "BITFINEX",
+  "Blockchain",
+  "Stripe",
+  "Kraken",
+  "Ledger",
+  "MetaMask",
+  "OpenSea",
+  "Trust Wallet",
+];
 
 function Partners() {
   return (
     <div className={styles.partners}>
-      <div className={styles.track}>
+      <Slider className={styles.row} direction="left" speed={30}>
         {PARTNERS.map((name) => (
           <span className={styles.brand} key={name}>
             {name}
           </span>
         ))}
-      </div>
+      </Slider>
     </div>
   );
 }

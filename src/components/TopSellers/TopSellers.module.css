@@ -1,7 +1,11 @@
 .section {
+  padding: 0 0 96px;
+}
+
+.inner {
   max-width: var(--content-width);
   margin: 0 auto;
-  padding: 0 24px 96px;
+  padding: 0 24px;
 }
 
 .rows {
@@ -12,7 +16,9 @@
 
 .grid {
   gap: 16px;
-  padding: 4px;
+  padding: 4px max(24px, calc((100vw - var(--content-width)) / 2 + 24px));
+  mask-image: linear-gradient(to right, transparent, black 40px, black calc(100% - 40px), transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 40px, black calc(100% - 40px), transparent);
 }
 
 .card {

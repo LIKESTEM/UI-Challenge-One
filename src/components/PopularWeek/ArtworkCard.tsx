@@ -6,12 +6,15 @@ export interface Artwork {
   price: string;
   likes: string;
   image: string;
-  featured?: boolean;
 }
 
-function ArtworkCard({ name, creator, price, likes, image, featured }: Artwork) {
+interface ArtworkCardProps extends Artwork {
+  centered?: boolean;
+}
+
+function ArtworkCard({ name, creator, price, likes, image, centered }: ArtworkCardProps) {
   return (
-    <div className={`${styles.card} ${featured ? styles.featured : ""}`}>
+    <div className={`${styles.card} ${centered ? styles.centered : ""}`}>
       <img src={image} className={styles.thumb} alt={name} />
       <div className={styles.cardFooter}>
         <div>

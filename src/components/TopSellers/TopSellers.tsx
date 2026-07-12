@@ -32,7 +32,9 @@ const ROW_TWO = SELLERS.slice(5);
 function TopSellers() {
   return (
     <section className={styles.section} id="artists">
-      <SectionHeading>Top Sellers</SectionHeading>
+      <div className={styles.inner}>
+        <SectionHeading>Top Sellers</SectionHeading>
+      </div>
       <div className={styles.rows}>
         <Slider className={styles.grid} direction="left">
           {ROW_ONE.map((seller) => (

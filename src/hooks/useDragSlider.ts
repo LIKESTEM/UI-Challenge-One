@@ -5,8 +5,10 @@ interface UseDragSliderOptions {
   resumeDelay?: number;
   /** 1 slides content leftward, -1 slides content rightward. */
   direction?: 1 | -1;
-  /** Loops continuously in one direction over doubled content instead of bouncing. */
+  /** Loops continuously in one direction over repeated content instead of bouncing. */
   loop?: boolean;
+  /** Number of times the content is repeated in the DOM when looping. */
+  copies?: number;
 }
 
 export function useDragSlider({
@@ -14,6 +16,7 @@ export function useDragSlider({
   resumeDelay = 2500,
   direction: initialDirection = 1,
   loop = false,
+  copies = 2,
 }: UseDragSliderOptions = {}) {
   const ref = useRef<HTMLDivElement>(null);
 
@@ -30,7 +33,7 @@ export function useDragSlider({
     let startScrollLeft = 0;
     let resumeTimeout: ReturnType<typeof setTimeout> | undefined;
 
-    const loopWidth = loop ? el.scrollWidth / 2 : 0;
+    const loopWidth = loop ? el.scrollWidth / copies : 0;
     if (loop && direction === -1) {
       el.scrollLeft = loopWidth;
     }
@@ -131,7 +134,7 @@ export function useDragSlider({
       el.removeEventListener("pointerenter", onPointerEnter);
       el.removeEventListener("pointerleave", onPointerLeave);
     };
-  }, [speed, resumeDelay, initialDirection, loop]);
+  }, [speed, resumeDelay, initialDirection, loop, copies]);
 
   return ref;
 }

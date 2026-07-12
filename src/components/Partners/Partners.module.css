@@ -1,16 +1,14 @@
 .partners {
   background: linear-gradient(90deg, #2c1058 0%, #330c72 55%, #6a3bff 100%);
-  padding: 22px 24px;
+  padding: 22px 0;
 }
 
-.track {
-  max-width: var(--content-width);
-  margin: 0 auto;
-  display: flex;
+.row {
+  gap: 48px;
   align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  flex-wrap: wrap;
+  padding: 0 max(24px, calc((100vw - var(--content-width)) / 2 + 24px));
+  mask-image: linear-gradient(to right, transparent, black 40px, black calc(100% - 40px), transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 40px, black calc(100% - 40px), transparent);
 }
 
 .brand {

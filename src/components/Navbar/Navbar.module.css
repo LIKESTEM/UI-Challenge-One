@@ -60,8 +60,8 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  background: #ffffff0d;
-  border: 1px solid #ffffff26;
+  background: #0a01010d;
+  border: 2px solid #cb91d284;
   border-radius: var(--radius-pill);
   padding: 9px 20px;
   color: var(--color-text-muted);

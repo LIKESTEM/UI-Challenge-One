@@ -64,6 +64,18 @@ function Navbar() {
       </button>
 
       <nav className={`${styles.mobileNav} ${menuOpen ? styles.mobileNavOpen : ""}`}>
+        <div className={styles.mobileSearch}>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <circle cx="7" cy="7" r="5.25" stroke="currentColor" strokeWidth="1.4" />
+            <path d="M11 11L14.5 14.5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
+          </svg>
+          <input
+            type="search"
+            className={styles.searchInput}
+            placeholder="Search"
+            aria-label="Search"
+          />
+        </div>
         <ul>
           {NAV_LINKS.map((link) => (
             <li key={link}>

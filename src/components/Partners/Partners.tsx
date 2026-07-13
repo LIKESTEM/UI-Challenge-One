@@ -1,7 +1,7 @@
 import Slider from "../Slider/Slider";
 import styles from "./Partners.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPaypal, faBitcoin } from "@fortawesome/free-brands-svg-icons"; // or wherever this comes from
+import { faPaypal } from "@fortawesome/free-brands-svg-icons"; // or wherever this comes from
 
 
 const PARTNERS = [

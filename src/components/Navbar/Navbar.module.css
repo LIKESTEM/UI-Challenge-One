@@ -182,10 +182,29 @@
     background: #ffffff14;
     color: var(--color-text) !important;
   }
-}
 
-@media (max-width: 640px) {
-  .search {
+  .actions .search {
     display: none;
+  }
+
+  .mobileSearch {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 8px;
+    background: #0a01010d;
+    border: 2px solid #cb91d284;
+    border-radius: var(--radius-pill);
+    padding: 9px 20px;
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+  }
+
+  .mobileSearch .searchInput {
+    width: 100%;
+  }
+
+  .mobileSearch:focus-within {
+    border-color: #ffffff59;
   }
 }

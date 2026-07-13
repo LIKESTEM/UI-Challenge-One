@@ -1,4 +1,5 @@
 .hero {
+  position: relative;
   max-width: var(--content-width);
   margin: 0 auto;
   padding: 56px 24px 80px;
@@ -6,6 +7,32 @@
   grid-template-columns: 1.05fr 0.95fr;
   gap: 48px;
   align-items: center;
+}
+
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(90px);
+}
+
+.hero::before {
+  top: -140px;
+  left: -100px;
+  width: 640px;
+  height: 640px;
+  background: radial-gradient(circle, #7939f9a6 0%, transparent 70%);
+}
+
+.hero::after {
+  bottom: -160px;
+  right: -120px;
+  width: 480px;
+  height: 480px;
+  background: radial-gradient(circle, #1db6d173 0%, transparent 70%);
 }
 
 .heading {

@@ -15,6 +15,7 @@
   gap: 32px;
   flex-wrap: wrap;
   overflow: hidden;
+  box-shadow: -50px 30px 150px -30px #4915a3c0;
 }
 
 .heading {

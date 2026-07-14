@@ -38,14 +38,16 @@ html {
 
 body {
   font-family: var(--font-body);
-  background:
-    radial-gradient(1200px 600px at 85% 4%, #08011caa, transparent 60%),
-    linear-gradient(180deg, var(--color-bg-top) 0%, var(--color-bg-mid) 45%, var(--color-bg-bottom) 100%);
+  background:#000;
   background-attachment: fixed;
   color: var(--color-text);
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
 }
+
+/* 
+    radial-gradient(1200px 600px at 85% 4%, #08011caa, transparent 60%),
+    linear-gradient(180deg, var(--color-bg-top) 0%, var(--color-bg-mid) 45%, var(--color-bg-bottom) 100%); */
 
 h1, h2, h3, h4 {
   font-family: var(--font-heading);

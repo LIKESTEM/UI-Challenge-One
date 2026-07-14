@@ -12,16 +12,18 @@ function BidCard() {
           <div>
             <p className={styles.bidLabel}>Ending in:</p>
             <p className={styles.bidValue}>1h 20m 30s</p>
+            <Button variant="primary">Place a Bid</Button>
           </div>
           <div>
-            <p className={styles.bidLabel}>Highest Bid</p>
-            <p className={styles.bidValue}>32.4 ETH</p>
+            <p className={styles.bidLabel2}>Highest Bid</p>
+            <p className={styles.bidValue2}>32.4 ETH</p>
+            <Button variant="ghost">Purchase</Button>
           </div>
         </div>
-        <div className={styles.bidActions}>
+        {/* <div className={styles.bidActions}>
           <Button variant="primary">Place a Bid</Button>
           <Button variant="ghost">Purchase</Button>
-        </div>
+        </div> */}
       </div>
     </div>
   );

@@ -12,8 +12,8 @@
   --color-text-muted: #d0cfe7;
   --color-text-dim: #7d7ba3;
 
-  --gradient-brand: linear-gradient(135deg, #9b3bff 0%, #4d6bff 100%);
-  --gradient-brand-soft: linear-gradient(135deg, #0428ddb8 0%, #3589d284 100%);
+  --gradient-brand: linear-gradient(135deg, #863dd5c9 0%, #316cff 100%);
+  --gradient-brand-soft: linear-gradient(135deg, #5704ddb8 0%, #3e9ad684 100%);
 
   --gradient-top-bottom: radial-gradient(ellipse, #294fe78f 0%, #2f5fe16a 45%, transparent 75%);
 

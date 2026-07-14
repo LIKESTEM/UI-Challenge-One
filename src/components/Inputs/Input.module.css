@@ -30,9 +30,9 @@
 }
 
 .ghost {
-  background: #ffffff14;
+  background: #ffffff4c;
   color: var(--color-text);
-  border: 1px solid #ffffff1f;
+  border: 2px solid rgba(106, 9, 197, 0.323);
 }
 
 .searchInput {

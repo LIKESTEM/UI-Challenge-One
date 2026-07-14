@@ -34,7 +34,7 @@
 }
 
 .centered {
-  transform: scale(1.12);
+  transform: scale(1.18);
   z-index: 2;
   box-shadow: 0 0 60px 0px #6a3bff80;
   margin: 10px;

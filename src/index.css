@@ -57,7 +57,7 @@ h1, h2, h3, h4 {
   line-height: 1.15;
 }
 
-body::before,
+/* body::before,
 body::after {
   content: "";
   position: absolute;
@@ -81,7 +81,7 @@ body::after {
   width: 480px;
   height: 480px;
   background: var(--gradient-top-bottom);
-}
+} */
 
 
 

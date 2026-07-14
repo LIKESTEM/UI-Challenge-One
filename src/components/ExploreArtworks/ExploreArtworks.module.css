@@ -13,7 +13,7 @@
   right: -260px;
   width: 900px;
   height: 700px;
-  background: radial-gradient(ellipse, #3b63ffbf 0%, #17b3cf80 45%, transparent 75%);
+  background: var(--gradient-top-bottom);
   filter: blur(90px);
   pointer-events: none;
 }

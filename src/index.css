@@ -13,7 +13,9 @@
   --color-text-dim: #7d7ba3;
 
   --gradient-brand: linear-gradient(135deg, #9b3bff 0%, #4d6bff 100%);
-  --gradient-brand-soft: linear-gradient(135deg, #50389c 0%, #4d6bff33 100%);
+  --gradient-brand-soft: linear-gradient(135deg, #0428ddb8 0%, #3589d284 100%);
+
+  --gradient-top-bottom: radial-gradient(ellipse, #294fe78f 0%, #2f5fe16a 45%, transparent 75%);
 
   --font-heading: "Orbitron", sans-serif;
   --font-body: "Inter", system-ui, -apple-system, sans-serif;
@@ -54,6 +56,35 @@ h1, h2, h3, h4 {
   font-weight: 700;
   line-height: 1.15;
 }
+
+body::before,
+body::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(90px);
+}
+
+body::before {
+  top: -140px;
+  left: -100px;
+  width: 640px;
+  height: 640px;
+  background: var(--gradient-top-bottom);
+}
+
+body::after {
+  bottom: -160px;
+  right: -120px;
+  width: 480px;
+  height: 480px;
+  background: var(--gradient-top-bottom);
+}
+
+
+
 
 a {
   color: inherit;

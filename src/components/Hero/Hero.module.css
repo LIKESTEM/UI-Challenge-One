@@ -9,7 +9,7 @@
   align-items: center;
 }
 
-.hero::before,
+/* .hero::before,
 .hero::after {
   content: "";
   position: absolute;
@@ -33,7 +33,7 @@
   width: 480px;
   height: 480px;
   background: radial-gradient(circle, #1db6d173 0%, transparent 70%);
-}
+} */
 
 .heading {
   font-size: clamp(2.2rem, 4.2vw, 3.2rem);

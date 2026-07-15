@@ -33,21 +33,37 @@
 }
 
 .nav a {
+  position: relative;
   font-size: 0.95rem;
   color: var(--color-text-muted);
   padding-bottom: 6px;
-  border-bottom: 2px solid transparent;
+  text-decoration: none;
   transition: color 0.15s ease;
 }
 
-.nav a:hover {
-  color: var(--color-text);
-  border-bottom-color: #690da6;
+.nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: transparent;
+  transition: width 0.15s ease, background-color 0.15s ease;
+}
+
+.nav a:hover::after {
+  width: 50%; /* shorten/lengthen this to taste */
+  background-color: #4c1fc7;
+}
+
+.activeLink::after {
+  width: 60%;
+  background-color: #ffffff;
 }
 
 .activeLink {
   color: var(--color-text) !important;
-  border-bottom-color: #ffffff;
 }
 
 .actions {
@@ -62,7 +78,7 @@
   align-items: center;
   gap: 8px;
   background: #0a01010d;
-  border: 2px solid #cb91d284;
+  border: 2px solid #6b6bed;
   border-radius: var(--radius-pill);
   padding: 9px 20px;
   color: var(--color-text-muted);

@@ -48,7 +48,7 @@
 .hero {
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 16 / 6;
   object-fit: cover;
   margin-top: 3px;
 }

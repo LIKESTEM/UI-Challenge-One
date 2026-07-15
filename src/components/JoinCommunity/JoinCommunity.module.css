@@ -12,10 +12,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   gap: 32px;
   flex-wrap: wrap;
   overflow: hidden;
   box-shadow: -50px 30px 150px -30px #4915a3c0;
+  border: 2px solid rgba(85, 159, 255, 0.492);
 }
 
 .heading {

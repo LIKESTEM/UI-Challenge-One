@@ -17,7 +17,7 @@
   flex-wrap: wrap;
   overflow: hidden;
   box-shadow: -50px 30px 150px -30px #4915a3c0;
-  border: 2px solid rgba(146, 193, 254, 0.41);
+  border: 1px solid rgba(146, 193, 254, 0.41);
 }
 
 .heading {

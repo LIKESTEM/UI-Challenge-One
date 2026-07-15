@@ -71,7 +71,7 @@
 .videoIcon {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
+  justify-content: end;
   width: 32px;
   height: 32px;
   
@@ -84,6 +84,10 @@
   
   /* Gives it that high-tech Web3 ambient glow */
   /* box-shadow: 0 4px 12px rgba(155, 59, 255, 0.35); */
+}
+
+.textDecoration {
+  text-decoration: underline;
 }
 
 

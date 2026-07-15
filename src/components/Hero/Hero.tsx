@@ -25,7 +25,7 @@ function Hero() {
               </svg>
             </span>
 
-            Watch a video
+            <label className={styles.textDecoration}>Watch a video</label>
           </button>
         </div>
 

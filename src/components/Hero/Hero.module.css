@@ -1,8 +1,10 @@
 .hero {
+  --hero-pad-top: clamp(20px, 4vh, 40px);
+  --hero-pad-bottom: clamp(24px, 5vh, 48px);
   position: relative;
   max-width: var(--content-width);
   margin: 0 auto;
-  padding: 40px 24px 48px;
+  padding: var(--hero-pad-top) 24px var(--hero-pad-bottom);
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
   gap: 48px;
@@ -36,15 +38,15 @@
 }
 
 .heading {
-  font-size: clamp(2.2rem, 4.2vw, 3.2rem);
+  font-size: clamp(2.2rem, 3vw + 1.6vh, 4.2rem);
   color: var(--color-text);
-  max-width: 620px;
+  max-width: 660px;
 }
 
 .subtext {
-  margin-top: 20px;
+  margin-top: clamp(10px, 2vh, 28px);
   color: var(--color-text-muted);
-  font-size: 1rem;
+  font-size: clamp(1rem, 0.4vw + 0.6vh, 1.25rem);
   max-width: 480px;
   line-height: 1.6;
 }
@@ -53,7 +55,7 @@
   display: flex;
   align-items: center;
   gap: 20px;
-  margin-top: 32px;
+  margin-top: clamp(16px, 3vh, 44px);
   flex-wrap: wrap;
 }
 
@@ -93,11 +95,11 @@
 
 /* Stats */
 .statsWrap {
-  margin-top: 44px;
+  margin-top: clamp(20px, 4vh, 56px);
   display: flex;
   align-items: start;
   flex-direction: column;
-  gap: 32px;
+  gap: clamp(16px, 2.5vh, 40px);
   /* flex-wrap: wrap; */
 }
 
@@ -238,5 +240,24 @@
 @media (max-width: 900px) {
   .hero {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 901px) {
+  .hero {
+    /* Navbar (71px) + Partners strip (67px) so hero + partners together
+       always close out exactly one screen, instead of leaving a partial
+       peek of the next section. */
+    min-height: calc(100svh - 138px);
+  }
+
+  .bidCard {
+    /* Cancel the base aspect-ratio: with an explicit height below, aspect-ratio
+       would otherwise derive width from height and overflow past the grid track. */
+    aspect-ratio: auto;
+    /* Fill the same height the hero row was stretched to, so the extra
+       space on tall screens goes into the artwork instead of empty gap. */
+    height: calc(100svh - 138px - var(--hero-pad-top) - var(--hero-pad-bottom));
+    min-height: min(460px, 58vh);
   }
 }

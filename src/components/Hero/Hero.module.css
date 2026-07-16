@@ -21,7 +21,7 @@
 
 .hero::before {
   top: -140px;
-  left: -100px;
+  left: -300px;
   width: 640px;
   height: 640px;
   background: var(--gradient-top-bottom);
@@ -29,7 +29,7 @@
 
 .hero::after {
   bottom: -160px;
-  right: -120px;
+  right: -300px;
   width: 480px;
   height: 480px;
   background: var(--gradient-top-bottom);

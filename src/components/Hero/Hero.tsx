@@ -15,7 +15,7 @@ function Hero() {
         <div className={styles.ctaRow}>
           <Button variant="primary">Discover</Button>
           <Button variant="outline">Create</Button>
-          <button className={styles.watchVideo} type="button">
+          <button className={`${styles.watchVideo} ${styles.textDecoration}`} type="button">
             <span className={styles.videoIcon}>
               <svg width="14" height="10" viewBox="0 0 14 10" fill="currentColor">
                 {/* Main camera body (rounded rectangle) */}
@@ -25,7 +25,7 @@ function Hero() {
               </svg>
             </span>
 
-            <label className={styles.textDecoration}>Watch a video</label>
+            <span>Watch a video</span>
           </button>
         </div>
 

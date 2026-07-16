@@ -25,7 +25,7 @@
   --radius-sm: 10px;
   --radius-pill: 12px;
 
-  --content-width: 1240px;
+  --content-width: clamp(1240px, 55vw, 1720px);
 }
 
 * {

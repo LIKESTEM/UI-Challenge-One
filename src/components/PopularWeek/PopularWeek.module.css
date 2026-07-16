@@ -70,7 +70,8 @@
   justify-content: space-between;
   gap: 8px;
   background: linear-gradient(125deg, #9429b2d9 0%, #17409ecd 55%, #0e345a1a 100%);
-  /* backdrop-filter: blur(6px); */
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+  backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
 }
 

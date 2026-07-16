@@ -6,17 +6,10 @@ import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { faPaypal } from "@fortawesome/free-brands-svg-icons"; 
 import { 
   SiBinance,
-  SiCoinbase,
   SiRevolut,
-  // SiExodus,
-  // SiBitfinex,
   SiBlockchaindotcom,
   SiStripe,
-  // SiKraken,
-  // SiLedger,
-  // SiMetamask,
   SiOpensea,
-  // SiTrustpilot,
  } from "react-icons/si";
  import type { IconType } from "react-icons";
 
